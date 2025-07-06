@@ -1,0 +1,19 @@
+-----setTimeout()
+setTimeout(callback, delay, ...args)
+setTimeout(resolve(),2000) ---delay 2s to run resolve function
+
+-----Use Promise
+function example(){
+    return new Promise((resolve, reject) => {
+    // do something
+    });    
+}
+example()
+    .then((result)=>{
+        console.log("result is:",result);
+        //do some other things if needed
+        })
+    .catch((error)=>console.log(error))
+
+
+

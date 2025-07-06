@@ -14,6 +14,7 @@ html {
     radial-gradient(circle at 95% 50%, rgb(224, 229, 239) 1%, transparent 15%),
     radial-gradient(circle at 5% 90%, rgb(224, 229, 239) 2%, transparent 15%),
     rgb(251, 251, 251);
+  scroll-behavior: smooth;
 }
 /*body {
   max-width: 1560px;

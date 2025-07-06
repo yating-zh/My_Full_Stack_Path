@@ -1,0 +1,21 @@
+-----Difference of sync and Async way to create/edit files
+1. sync way execute code "top to bottom". when dealing with file system, block the entire execution
+2. Async way executing other code and dealing with the file system at the same time, does not block entire execation
+sync适合简单的小scripts，慢； 而async适合实际的app，注重server的表现，server能同时处理多个request，快
+
+
+-----Async⚠️
+Must check {if (err) throw err;}, For Async Node won't crash. It just continues,which can lead to confusing bugs.
+
+
+-----Need to remember:
+fs.existsSync(folder)   //check if the folder exist
+fs.mkdirSync(folder)    //make directory for this folder
+
+fs.writeFileSync()
+fs.readFileSync()
+fs.appendFileSync()
+
+fs.writeFile()
+fs.readFile()
+fs.appendFile()

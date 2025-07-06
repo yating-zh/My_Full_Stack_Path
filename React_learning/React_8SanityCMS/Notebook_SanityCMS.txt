@@ -1,0 +1,22 @@
+1. what is 
+- Sanity is headless CMS, store data, provide API. (headless ~= no frontend, which gives better flexibility).
+- Sanity Studio: React-based Admin UI, for admin to write article, upload images etc.
+
+2. Create New Sanity Project
+> npm create sanity@latest //create new sanity project
+> (Select login type and login)
+> (create new project,enter)
+> (create projectName)
+> (select organization...use default dataset...check path...select project template...use TypeScript?...package manager?npm...)
+then Open VSCode manually or:
+> cd {projectName} 
+> code .
+
+3.sanity commands
+npx sanity docs     to open the documentation in a browser
+npx sanity manage   to open the project settings in a browser
+npx sanity help     to explore the CLI manual
+npm run dev         to launch your Studio’s development server
+
+4.React
+> npm install @sanity/client @sanity/image-url

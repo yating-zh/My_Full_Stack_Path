@@ -7,3 +7,14 @@ Understand of
     path.join()
     path.resolve()
     path.normalize()
+
+For example, __filename is: /users/example/item/image.png
+    path.dirname(__filename)               /users/example/item
+    path.basename(__filename)              image.png
+    path.extname(__filename)               .png
+    path.join("seg1","seg2")               seg1/seg2
+    path.join("/seg1","seg2")              /seg1/seg2
+    path.resolve("seg1","seg2")            /current_DIR/seg1/seg2
+    path.resolve("/seg1","seg2")           /seg1/seg2
+    path.resolve("/seg1","/seg2")          /seg2
+    path.normalize("/seg1/.seg2/../seg3")  /seg1/seg3   

@@ -1,0 +1,2 @@
+hello, this is the sync nodejs
+This is the new line in the file 

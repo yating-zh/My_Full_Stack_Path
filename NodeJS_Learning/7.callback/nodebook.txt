@@ -1,0 +1,13 @@
+-----callback function
+A callback is just a function you give to another function,so it can call it back later when it’s done.
+
+
+
+-----callback hell
+multiple nested callbacks make the code cahder to read, maintain and debug
+
+
+-----how to solve calback hell
+1. Use Promises
+2. Use async/await 
+to flatten the structure

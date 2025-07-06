@@ -1,0 +1,13 @@
+----- Async/await format
+async function mainFunction(data) {
+    await subFunction(); 
+    console.log(data);
+    //do some other things if needed
+}
+mainFunction(exampleData);
+
+
+----- Async/await 和 Promise 的联系
+Async/await built on top of Promise
+Async/await always NEED Promise to use 
+Async/await always RETURNS a Promise
