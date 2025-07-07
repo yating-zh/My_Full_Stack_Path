@@ -1,0 +1,32 @@
+-----init env and install Express
+> npm init
+> npm install express
+
+
+-----import and invoke Express
+const express = require("express");
+const app = express(); 
+...
+app.get("/",(req,res)=>{callback-function})
+
+
+-----listen a port
+const port=3000;
+app.listen(port,()=>{callback-function})
+
+
+-----Recap of JSON
+1. It looks like object/array but it is a string format.
+2. Can be transfered through HTTP (request or body), but object/array can't.
+3. > frontend use data.stringify() to get json format, so the data can be transfered through HTTP;
+    > backend received the json data, then use data.parse() to get the object/array.
+
+
+-----res.json() in Express:
+app.get("/", (req, res) => {
+  res.json({ hello: "world" }); 
+  
+  // same as:
+  // res.setHeader("Content-Type", "application/json");
+  // res.send(JSON.stringify({ hello: "world" }));
+});

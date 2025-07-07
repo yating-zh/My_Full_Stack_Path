@@ -1,0 +1,24 @@
+----- ON method and EMIT method
+On: is used to add an event and a callbackfunction. When the event is triggered, execute the callback function.
+Emit: is used to trigger an event
+
+
+-----format of event emitter
+const EventEmitter=require("events");
+const myEventEmitter=new EventEmitter();
+
+myEventEmitter.on("eventName",(data)=>{console.log(`the first ON executed: ${data}`)})
+myEventEmitter.emit("eventName","data")
+
+
+-----A recap of class, constructor, and super()
+1. Class and Constructor
+Constructor is like the "setup initialization for an object".
+When create the object, it follows the setup defined in the constructor.
+
+2. Super()
+Super() is used to call the constructor of the parent class
+
+3. This. keyword
+"this." inside a class means: It’s a property or method of the instance.
+In other words: Everything with this. inside a class becomes a property or method of the object created from that class.
