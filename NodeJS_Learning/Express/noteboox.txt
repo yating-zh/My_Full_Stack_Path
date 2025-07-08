@@ -25,8 +25,47 @@ app.listen(port,()=>{callback-function})
 -----res.json() in Express:
 app.get("/", (req, res) => {
   res.json({ hello: "world" }); 
-  
+
   // same as:
   // res.setHeader("Content-Type", "application/json");
   // res.send(JSON.stringify({ hello: "world" }));
 });
+
+
+-----Middleware
+1. Middleware is a function that runs when the server receives a request. Middleware runs whenever a request is received, does something, then passes to the next step.
+2. It can do:
+    > logging
+    > parsing JSON
+    > check authentication...
+3. call next() to pass control to next middleware/route handler
+
+
+-----Define middleware function
+const myFirstMiddleware = (req, res, next) => {
+  console.log("this is the middleware");
+  next();
+};
+app.use(myFirstMiddleware);
+
+
+----- Data()
+is a built-in JavaScript class
+> new Date().toISOString()   -----universal timestamp string(UTC)
+  2025-07-08T03:37:40.562Z
+> new Date().toString()      -----local timestamp (long format with timezone)
+  Tue Jul 08 2025 13:40:08 GMT+1000 (Australian Eastern Standard Time)
+> new Date().toLocaleString()-----local timestamp (shorter format)
+  7/8/2025, 1:40:08 PM 
+
+
+-----EJS
+is Embedded JavaScript templating.
+It can generate HTML from backend JavaScript.Then the server sends the rendered HTML to the frontend (SSR).
+SSR: server side rendering. 
+
+
+-----EJS Basic syntex
+<%  %> Runs JavaScript code only for logic, like loops, if, forEach,not visible in page
+<%= %> is used to return a value safely as text (HTML-escaped)
+<%- %> is used to output a value as raw HTML (like showing a component or HTML string)

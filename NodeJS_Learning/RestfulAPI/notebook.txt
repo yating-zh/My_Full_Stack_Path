@@ -1,0 +1,35 @@
+----- app.use(express.json());
+is built-in middleware in Express that parses incoming JSON payloads, and puts the parsed data on req.body.
+1. JSON is usually in the body of POST request
+2. express.json() parses JSON into Objsect/array, server can access easily via req.body
+
+
+-----CRUD
+app.post()    //create
+app.get()     //read
+app.put()     //update
+app.delete()  //delete
+
+
+-----req.params.id
+the id segment in the url,like https://example/products/7, 7 is the params id
+
+
+-----req.body
+is the json file through HTTP body (sent from frontend)
+
+
+-----array.splice(a,n)
+start at index a, delete n items
+example:
+const books = ["A", "B", "C", "D"];
+const removed = books.splice(2, 1);
+//books → ["A", "B", "D"]
+//emoved → ["C"]
+
+
+-----Recap Math method
+Math.random()  //random number between[0,1)
+Math.floor()  //rounds down to nearest integer
+Math.round()  //rounds to nearest integer (4-,5+)
+Math.ceil()   //Rounds up to the nearest integer
