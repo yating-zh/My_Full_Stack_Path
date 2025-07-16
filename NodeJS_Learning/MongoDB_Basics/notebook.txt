@@ -1,0 +1,36 @@
+----- MongoDB and Mongoose 
+1. MongoDB
+    MongoDB is a NoSQL database. It stores JSON-like documents.Very flexible, but also very loose.
+2. Mongoose
+    Mongoose is a library for Node.JS. use it to define a schema(s model) for the data, and then use that schema to interact with MongoDB
+
+
+----- Atlas
+is the official managed hosting cloud platform for MongoDB. 
+Atlas handles backups, scaling, monitoring; fully managed; ready-to-use
+ * Network Access need to be checked if cannot accessed to the DB *
+
+
+----- install Mongoose
+ > npm i mongoose
+
+
+----- connect to Atlas MongoDB through VSCode
+const mongoose = require("mongoose");
+mongoose.connect("mongodb+srv://<user_name>:<db_password>@cluster0.g7mqkbi.mongodb.net/").then().catch()
+
+
+----- Try...Catch...Finally
+try {
+  // main code ( might throw an error)
+} catch (e) {
+  // runs if there is an error; no matter system error or the error thrown from try{}
+} finally {
+  // for cleanup; always runs, no matter what
+}
+
+
+----- Schema, model and Document
+1. Schema is a blueprint/ structure defination
+2. Model is a constructor compiled from the Schema. Used for CRUD data/documents
+3. One document in MongoDB equals to one data record in SQL

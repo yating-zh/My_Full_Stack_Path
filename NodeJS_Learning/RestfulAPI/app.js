@@ -1,3 +1,5 @@
+//thi is just an example, so all these are in one app.js file.
+//for real projects, need a proper structure. need to keep the app.js (root) file clean.
 const express = require("express");
 const app = express();
 
@@ -60,7 +62,7 @@ app.put("/update/:id", (req, res) => {
       data: specificBook,
     });
   } else {
-    res.status(200).json({
+    res.status(404).json({
       message: "book not found",
     });
   }
@@ -80,7 +82,7 @@ app.delete("/delete/:id", (req, res) => {
       data: deletedBook,
     });
   } else {
-    res.status(200).json({
+    res.status(404).json({
       message: "book not found",
     });
   }
