@@ -16,6 +16,7 @@
   width: 100vw;
   position: sticky;
   top: 0;
+  z-index: 9;
 }
 .links-container {
   height: 100%;
@@ -46,6 +47,10 @@
   font-weight: 600;
   color: var(--focus-clr);
   padding: 0.9rem;
+  width: 25rem;
+  h2 {
+    margin-left: 1rem;
+  }
 }
 .nav .home-link:hover {
   color: var(--focus-clr);
@@ -95,6 +100,10 @@
     width: 100%;
     padding: 1rem 2rem;
     justify-content: flex-start;
+  }
+  .nav .home-link img {
+    visibility: hidden;
+    width: 0px;
   }
 
   .open-sidebar-button,

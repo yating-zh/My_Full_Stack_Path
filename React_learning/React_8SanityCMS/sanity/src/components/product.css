@@ -12,6 +12,7 @@
 .productImg img {
   width: 100%;
   max-width: 50rem;
+  padding: 4rem;
 }
 .productText {
   flex: 1;

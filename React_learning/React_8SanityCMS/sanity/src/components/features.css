@@ -55,8 +55,8 @@
 .aboutUs {
   margin-top: 5rem;
   text-align: center;
-  width: 1000px;
-  width: 1000px;
+  width: inherit;
+  max-width: 1000px;
 }
 .aboutUs p {
   margin-top: 1rem;

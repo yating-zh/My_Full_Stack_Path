@@ -16,53 +16,44 @@ export default function Features() {
             <div className="fcardIcon">
               <img src={reporting} alt="icon" />
             </div>
-            <div className="fcardTitle">Survey & Engagement Tools</div>
+            <div className="fcardTitle">Tech of this Project</div>
             <div className="fcardDescription">
-              Automated, hands-free surveys built from our expertise developed
-              over 20,000 board boardroom interviews and research; our surveys
-              provide guides and roadmaps for success across all aspects of
-              board performance. Our modules can help your board run fast,
-              efficient and enjoyable processes for board governance, director
-              skills and talent matrices, boardroom team culture and
-              composition, chair and director feedback, board committee
-              effectiveness, and much more. View, download and share survey
-              reports, displaying both aggregated survey data from your board,
-              along with best-practice benchmarks, highlights and areas of
-              improvement. Adaptable to any organization structure, size and
-              type.
+              This demo showcases a responsive layout built using HTML, CSS,
+              JavaScript, Node.js, and Sanity CMS as the headless backend.
+              Content is managed dynamically through Sanity CMS — even someone
+              without a technical background can easily update or publish
+              content. This project is my first hands-on experience with a
+              Headless CMS. It reflects my ability to learn quickly and apply
+              new tools effectively. I'm passionate about continuous learning
+              and always eager to explore new technologies that enhance modern
+              web development.
             </div>
           </div>
           <div className="fcard">
             <div className="fcardIcon">
               <img src={reporting} alt="icon" />
             </div>
-            <div className="fcardTitle">Data & AI Capabilities</div>
+            <div className="fcardTitle">Design</div>
             <div className="fcardDescription">
-              Our data and AI capabilities have been built to help you focus on
-              where you as a director need to go and can augment your boardroom
-              capabilities wherever they could be supplemented (risk and
-              regulatory compliance, strategy modelling, future technology
-              thinking, vetting and selecting new directors or senior
-              executives). Our deeply trained and tested AI Avatars can
-              understand your industry and competitors, focus on your company,
-              apply best boardroom practices and supplement discussions with
-              synthesized summaries and augmented insights – saving your board
-              and company time, helping you meet your director obligations, and
-              enhancing board and organisational decision making.
+              This demo was created with modern design principles in mind —
+              focusing on visual clarity, layout consistency, and smooth
+              responsiveness across all device sizes. Every detail matters, from
+              clean, maintainable code to an intuitive user interface that
+              adapts seamlessly to mobile, tablet, and desktop screens.
             </div>
           </div>
         </div>
         <div className="aboutUs">
           <div>
-            <h2>About Us</h2>
+            <h2>About Yating</h2>
             <p>
-              Pearl Analytics has been created by the team behind pre-eminent
-              specialist board advisory firm Blackhall & Pearl with a foundation
-              of over 12 years of providing trusted and bespoke advice to boards
-              and executive leadership teams of listed and unlisted companies,
-              government agencies, family businesses, superannuation funds and
-              not‑for‑profit, community and member-based organisations. Learn
-              more about our Trusted Partners <a href="#">here</a>.
+              Motivated Computer Science master's graduate with a GPA of 6+,
+              seeking a junior role in the IT industry to apply technical skills
+              and continue growing. Alongside my studies, I worked as a tutor at
+              UQ, enhancing my communication and mentoring skills. Previously, I
+              spent five years as a project planner at a manufacturing company,
+              developing strong problem- solving and organisational abilities.
+              Available to start immediately. <a href="#">here</a>.
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import "./nav.css";
 import logo_dark from "../assets/logo-dark.webp";
+import demo from "../assets/demo.png";
 
 export default function Nav() {
   return (
@@ -33,7 +34,9 @@ export default function Nav() {
         </label>
 
         <a className="home-link" href="#">
-          <img src={logo_dark} alt="logo-dark" />
+          {/*<img src={logo_dark} alt="logo" />*/}
+          <img src={demo} alt="logo" />
+          <h2>Headless CMS</h2>
         </a>
         <a href="#home">Home</a>
         <a href="#product">Product</a>

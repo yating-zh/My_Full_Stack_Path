@@ -1,4 +1,6 @@
 import bg_portfolio from "../assets/bg_portfolio.png";
+import blurred_full_page from "../assets/blurred_full_page.png";
+
 import "./product.css";
 import time_saving from "../assets/time_saving.png";
 import decision_making from "../assets/decision_making.png";
@@ -16,16 +18,16 @@ export default function Product() {
     <div id="product">
       <div className="product">
         <div className="productImg">
-          <img src={bg_portfolio} alt="product image" />
+          <img src={blurred_full_page} alt="product image" />
         </div>
         <div className="productText">
-          <h2>Trusted by leaders, crafted by experts</h2>
+          <h2>Designed with precision, built for modern experiences</h2>
           <p>
-            For decision-makers who value data-driven debate as the starting
-            point, supported by practical recommendations. Pearl Analytics is
-            the essential tool for Chairs, Directors, CEOs, Company Secretaries
-            and Investors who require precise, data-driven insights to guide
-            strategic decisions.
+            This demo was created with modern design principles in mind —
+            focusing on visual clarity, layout consistency, and smooth
+            responsiveness across all device sizes. Every detail matters, from
+            clean, maintainable code to an intuitive user interface that adapts
+            seamlessly to mobile, tablet, and desktop screens.
           </p>
         </div>
       </div>

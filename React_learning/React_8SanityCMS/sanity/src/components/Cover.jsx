@@ -8,16 +8,14 @@ export default function Cover() {
       <div className="cover">
         <div className="coverText">
           <p>
-            <span className="uppercase">Pearl Analytics</span>
+            <span className="uppercase">Yating's Demo</span>
           </p>
           <h1 className="slogan">
-            <span className="focus_text">Revolutionise</span> your board
-            performance.
+            A Demo of
+            <span className="focus_text"> Sanity CMS </span> With Responsive
+            Layout.
           </h1>
-          <p>
-            Discover how Pearl Analytics can uncover insights, actions and value
-            in the boardroom.
-          </p>
+          <p>This demo is my first hands-on experience with a Headless CMS.</p>
           <button>Express Interest</button>
         </div>
         <div className="coverImg">
@@ -31,28 +29,20 @@ export default function Cover() {
       </div>
       <div className="description">
         <h2>
-          Pearl Analytics provides clients with a cutting-edge, AI-driven
-          software platform tailored to drive value in boardroom and management
-          team discussions
+          This demo showcases a responsive layout built using HTML, CSS,
+          JavaScript, Node.js, and Sanity CMS as the headless backend.
         </h2>
         <div className="descriptionText">
           <p>
-            We combine global best-practice benchmarks, practical
-            recommendations, and insights from over 20,000 board interviews with
-            powerful survey services and cutting-edge, deeply trained AI tools.
+            Content is managed dynamically through Sanity CMS — even someone
+            without a technical background can easily update or publish content.
+            This project is my first hands-on experience with a Headless CMS. It
+            reflects my ability to learn quickly and apply new tools
+            effectively.
           </p>
           <p>
-            By automating data integration and visualisation, Pearl Analytics
-            transforms information into actionable insights—enabling faster,
-            more informed decisions that align with organisational value and
-            strategy.{" "}
-          </p>
-          <p>
-            Founded and built by the team behind one of the world’s leading
-            board consultancies, our software combines expert board performance,
-            strategy, risk and governance practices with powerful analytics
-            tools to improve reporting and compliance, synthesize insights and
-            align focus to strategic ambitions.
+            I'm passionate about continuous learning and always eager to explore
+            new technologies that enhance modern web development.
           </p>
         </div>
       </div>
