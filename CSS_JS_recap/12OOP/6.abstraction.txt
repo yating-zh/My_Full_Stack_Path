@@ -1,0 +1,26 @@
+----- Scope and Closure
+1. Scope means an inner function can access variables declared in its outer function.
+2. Closure means that when an object is created (using constructor function), any inner function will retain access to the variables it could see when it was defined, even after the outer function(constructor function) has finished executing.
+
+3. In this example:
+> defaultLocation is in the SCOPE of function Circle2()
+> defaultLocation is within the CLUSURE of draw(),so draw() can access it even after Circle2() has finished executing.
+
+function Circle2(radius) {
+  this.radius = radius;
+
+  let defaultLocation = { x: 0, y: 0 };
+
+  let computeOptimumLocation2 = function (factor) {
+    // ...
+  };
+
+  this.draw = function () {
+    let x, y; //scope limited to this draw function
+    computeOptimumLocation2();
+    console.log("draw2");
+  };
+}
+const circle2 = new Circle2(2);
+circle2.draw();
+

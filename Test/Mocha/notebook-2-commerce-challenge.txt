@@ -1,0 +1,55 @@
+----- initialisation
+npm init
+npm install --save-dev mocha
+npm test
+
+
+----- BDD-style testing 
+1. BDD-style testing in Mocha: https://mochajs.org/#bdd
+2. Example:
+describe("Check Total Price in ShoppingCart", function () {
+  context("when adding 2 Apples and 1 Orange", function () {
+    it("should return the correct total price", function () {
+      // test logic
+    });
+  });
+});
+
+
+----- New instance in testing
+1. need to use separate objects, avoids shared state or incorrect behavior
+2. Example:
+cart.add(new Product("Apple", 4.95));
+cart.add(new Product("Apple", 4.95));
+3. Bad Example:
+const apple=new Product("Apple", 4.95)
+cart.add(apple);
+cart.add(apple); //same object
+for example "buy one get one free" promotion, changing apple.price = 0 would affect both items, because they are actually the same object.
+
+
+----- StandardJS
+1. https://standardjs.com/ is a style for clean code
+> npm install standard --global   //for all JS projects
+> npm install standard --save-dev //for current project
+> npx standard file_name.js       //show errors
+> npx standard file_name.js --fix     //fix errors
+2. VScode extension
+install the "vscode-standard" extension
+3. Support Mocha
+add /* eslint-env mocha */ to the top of the test file.
+
+
+----- .tar.gz
+1. Compress
+  > cd [project folder]
+  > tar -czf ../projectName.tar.gz .
+2. Extract
+  > cd [project folder]
+  > tar -xzf projectName.tar.gz
+3. explanation in detail
+  tar // archive tool
+  -c  // create a new archive
+  -z  // compress with gzip
+  -f  // use archive file name (projectName.tar.gz)
+  .   // archive the contents of the current directory

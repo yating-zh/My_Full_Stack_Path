@@ -1,0 +1,79 @@
+----- Mocha
+is a Javascript test framework, which can run on Nodejs and on the brwoser
+
+
+----- Installation
+npm init
+npm install --save-dev mocha //install Mocha only for the current project
+npm install --global mocha  //install Mocha system-wide
+npm list -g //check the globally installed Mocha
+
+
+----- run a single test
+1. add these to package.json
+{
+  "scripts": {
+    "test": "mocha test.js"
+  }
+}
+2. create test.js test file 
+3. command 
+%npm test
+
+
+----- run multiple tests
+1. add script to package.json
+{
+  "scripts": {
+    "regressionSuite": "mocha 1_test/* --timeouts 0 --parallel --jobs 2" //run all the test (js) files within test folder
+  }
+}
+2. run command
+%npm run script_name
+
+
+
+----- Basics
+1. Test Suite is a group of related test cases. Mocha create test suite using describe()
+it("name of the test case", function(){
+    //...code for testing the functionality
+})
+
+2. Test Case: is a single unit of testing, one specific scenario to check. Mocha create test case using it()
+describe("title of the test suite",function(){
+    //test cases...
+    //it("name of the case",function(){})
+})
+
+
+----- this.test and this.currentTest
+1. this.test
+used in it();
+this.test.title    //case title
+this.test.file     //file address
+this.test.parent.title    //suite title
+this.test.fullTitle()     //suite title + case title
+
+2. this.currentTest
+used in beforeEach /afterEach hooks;
+this.currentTest.title    //case title
+this.currentTest.file     //file address
+this.currentTest.parent.title    //suite title
+this.currentTest.fullTitle()     //suite title + case title
+this.currentTest.state     //passed or failed state of the test, use in afterEach hook
+
+----- Assert
+const assert = require("assert");
+assert.equal(A, B)      // use loose equality "=="
+assert.strictEqual(A, B)   // use strict equality "==="
+
+
+
+
+
+
+----- Refer
+https://mochajs.org/#getting-started
+https://www.youtube.com/watch?v=KqabDaN9SeI&list=PLZd3NM0jvzIdaBvBpfADrACaZHDMxoBEI&index=1
+
+
