@@ -1,0 +1,64 @@
+----- 1. setup and init
+> npm init -y
+> npm install express mongoose dotenv
+> npm install standard --save-dev
+> npm install -g nodemon --save-dev   (add "start": "node server.js","dev":"nodemon server.js" to package.json)
+> npm run dev
+
+
+----- 2. MongoDB - $or operator
+//
+$or: [{ username:"mary" }, { email:mary@gmail.com }]
+// used in Model.findOne()
+const checkUser = await User.findOne({
+  $or: [
+    { username: "mary" },
+    { email: "mary@gmail.com" }
+  ]
+})
+
+
+----- 3. Hash Password
+1) Why use?
+    - user submit password
+    - server hash the password to convert password to fixed-length string. 
+    - save the hashed password to DB, even if the DB is hacked, passwords wont be exposed
+2) Hashing features?
+    - One-way function, cannot "unhash" it
+    - same input -> same output, used to verify password by comparing input with stored hash
+3) Salt?
+    - Salt is random data added to a password before hashing. 
+    - Even if two users have the same password, their hashes will be different.
+
+
+----- 4. bcript.js
+bcrypt.js is a JavaScript library for hashing passwords. bcript itself is a hashing algorithm,.
+1) Installation
+    >npm i bcryptjs
+2) How to use
+const salt = await bcrypt.genSalt(10)  // generates a salt with 10 rounds
+const hashedPassword = await bcrypt.hash(plainPassword, salt)
+//compare password:
+const isMatch = await bcrypt.compare('mypassword123', hashedPassword)
+
+
+----- 5. Jsonwebtoken - JWT
+is a compact, URL-safe way to represent claims or user identity between client and server
+1) Installation
+    >npm i jsonwebtoken
+
+2) JWT sign
+   const accessToken = jwt.sign({
+      userID: user._id,
+      username: user.username,
+      role: user.role
+    }, process.env.JWT_SECRET, { expiresIn: '5m' })
+3) JWT verify
+    const decodedTokenInfo = jwt.verify(token, process.env.JWT_SECRET)
+
+
+----- 6. Use middleware to verify user authority
+1) Example
+router.get('/welcome', middleware,(req, res) => {})
+})
+// here middleware is a function that verify the role of the user (using token)

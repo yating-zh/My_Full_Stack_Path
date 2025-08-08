@@ -1,0 +1,25 @@
+----- Initialise using StandardJS
+
+> npm init -y
+> npm install standard --save-dev
+
+* then command+shift+P open up setting.json:
+  "editor.defaultFormatter": "standard.vscode-standard"
+  "standard.autoFixOnSave": true,
+
+
+-----  Nodemon
+1. what is Nodemon: is a utility monitors for any changes in your source and automatically restart your server.
+2. Installisation
+  > npm install -g nodemon
+  > npm install -g nodemon --save-dev
+3. Edit package.json
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+4. Run
+  >npm run dev
+
+
+----- Install express mongoose dotenv
+> npm install express mongoose dotenv

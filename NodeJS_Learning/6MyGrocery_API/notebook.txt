@@ -1,0 +1,42 @@
+----- 1. setup and init
+> npm init -y
+> npm install express mongoose dotenv
+> npm install standard --save-dev
+> npm install -g nodemon --save-dev   (add "start": "node server.js","dev":"nodemon server.js" to package.json)
+> npm run dev
+
+
+----- 2. structure
+server.js
+- database
+    db.js
+- routes
+    routes.js
+- controller
+    controller.js
+- model
+    model.js
+
+
+----- 3. Postman
+1. add new product
+POST http://localhost:3000/grocery_api/products/add
+{ "name": "Orange",        "category": "Fruit",      "price": 1.29, "stock": 120, "onSale": false }
+
+2. list all products
+GET http://localhost:3000/grocery_api/products/get
+
+3. query a product by ID
+GET http://localhost:3000/grocery_api/products/get/688adf69bb7185fe7be089bb
+
+4. update a product by ID
+PUT http://localhost:3000/grocery_api/products/update/688adf69bb7185fe7be089bb
+{ "price": 6, "tags":["fresh"]}
+
+5. (update) adding new tags
+PUT http://localhost:3000/grocery_api/products/tags/688ae16522f884fd578ae058
+{"tags":["healthy","fresh","whatever"]}
+
+6. delete a product by ID
+DELETE http://localhost:3000/grocery_api/products/delete/688ae00222f884fd578ae056
+
